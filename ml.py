@@ -49,9 +49,9 @@ def main():
 
 
     if (prediction[0] == 0):
-      return '<h1>The person is not diabetic</h1>'
+      return render_template('0.html')
     else:
-      return '<h1>The person is diabetic</h1>'
+      return render_template('1.html')
   return render_template('index.html',form=form)
   
 if __name__ == '__main__':
