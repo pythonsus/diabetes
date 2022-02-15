@@ -6,7 +6,10 @@ from sklearn.model_selection import train_test_split as tts
 from sklearn import svm
 from flask import render_template,Flask
 from joblib import dump, load
+application = Flask(__name__)
+application.config['SECRET_KEY'] = 'iuhguivfduivdifvjdfhv'
 
+@application.route('/', methods=['GET','POST'])
 def main():
   data = pd.read_csv('diabetes.csv')
   data.groupby('Outcome').mean()
@@ -39,7 +42,9 @@ def main():
 
 
   if (prediction[0] == 0):
-    print('The person is not diabetic')
+    return '<h1>The person is not diabetic</h1>'
   else:
-    print('The person is diabetic')
+    return '<h1>The person is diabetic</h1>'
 main()
+if __name__ == '__main__':
+    application.run(debug=True)
