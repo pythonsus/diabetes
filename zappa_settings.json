@@ -1,0 +1,11 @@
+{
+    "Diabetes": {
+        "s3_bucket": "zappascsdap",
+        "app_function": "translater.application",
+        "profile_name": "default",
+        "project_name": "dev",
+        "runtime": "python3.9",
+        "aws_region": "us-east-1"
+	
+    }
+}
