@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Diabetes prediction</title>
+</head>
+<body>
+    78% accurate diabetes predicter
+    <form action="" method="post">
+        <p>
+            {{form.p.label}} <br>
+            {{form.p(size=30)}}
+        </p>
+        <ul>
+            {% for error in form.p.errors %}
+                <li style="color:red;">{{ error }}</li>
+            {% endfor %}
+            </ul>
+        <p>
+            {{form.g.label}} <br>
+            {{form.g(size=30)}}
+        </p>
+        <ul>
+            {% for error in form.g.errors %}
+                <li style="color:red;">{{ error }}</li>
+            {% endfor %}
+            </ul>
+        <p>
+            {{form.bp.label}} <br>
+            {{form.bp(size=100)}}
+        </p>
+        <ul>
+            {% for error in form.bp.errors %}
+                <li style="color:red;">{{ error }}</li>
+            {% endfor %}
+            </ul>
+            <p>
+                {{form.st.label}} <br>
+                {{form.st(size=30)}}
+            </p>
+            <ul>
+                {% for error in form.st.errors %}
+                    <li style="color:red;">{{ error }}</li>
+                {% endfor %}
+                </ul>
+            <p>
+                {{form.I.label}} <br>
+                {{form.I(size=30)}}
+            </p>
+            <ul>
+                {% for error in form.I.errors %}
+                    <li style="color:red;">{{ error }}</li>
+                {% endfor %}
+                </ul>
+            <p>
+                {{form.BMI.label}} <br>
+                {{form.BMI(size=100)}}
+            </p>
+            <ul>
+                {% for error in form.BMI.errors %}
+                    <li style="color:red;">{{ error }}</li>
+                {% endfor %}
+                </ul>
+                <p>
+                    {{form.dpf.label}} <br>
+                    {{form.dpf(size=30)}}
+                </p>
+                <ul>
+                    {% for error in form.dpf.errors %}
+                        <li style="color:red;">{{ error }}</li>
+                    {% endfor %}
+                    </ul>
+                <p>
+                    {{form.Age.label}} <br>
+                    {{form.Age(size=100)}}
+                </p>
+                <ul>
+                    {% for error in form.Age.errors %}
+                        <li style="color:red;">{{ error }}</li>
+                    {% endfor %}
+                    </ul>
+            <p>{{form.submit()}}</p>
+    </form>
+</body>
+</html>
